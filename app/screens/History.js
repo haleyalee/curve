@@ -17,17 +17,25 @@ export class History extends Component {
 
         {/* Header */}
         <View>
-          <Text>
+          <Text style={{fontFamily: 'DMSerifDisplay_400Regular'}}>
             history
           </Text>
           <Text>
-            date
+            <Text style={{fontFamily: 'CarroisGothicSC_400Regular'}}>
+              first date
+            </Text>
+            <Text>
+              -
+            </Text>
+            <Text>
+              second date
+            </Text>
           </Text>
         </View>
 
         {/* Body */}
         <View>
-          
+
         </View>
 
         {/* Dock */}
