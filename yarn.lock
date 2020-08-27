@@ -1048,11 +1048,6 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/dm-serif-display/-/dm-serif-display-0.1.0.tgz#b54996cc1e073e1b42d487a29b27d71382858515"
   integrity sha512-rGexsE/pPjlCHMt6Gm1nNOCaZNfR2LYFNjNWKki37Lq2iEgBXOJB84wSNrmAzeJHjGpE7+cWt9d7S+MHuKzsSQ==
 
-"@expo-google-fonts/inter@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@expo-google-fonts/inter/-/inter-0.1.0.tgz#399f068437824fcbf6aa3da5fcf490dba2af85a3"
-  integrity sha512-Y6GCqsUX6JwexQ2wmBkMiJBY6M2GpNQRTczzIGbBGhXWQxqGmP5awRcf0ZJV+OlLeJcKAzas/TW45ZLdpG3yzA==
-
 "@expo-google-fonts/muli@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/muli/-/muli-0.1.0.tgz#e703c684e1ebbe1c1dddf5949701702d571232c7"

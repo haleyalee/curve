@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
   },
   button: {
-    width: 160,
+    minWidth: 160,
     height: 40,
     backgroundColor: '#235789',
     borderRadius: 20,
@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
     minHeight: 60,
     borderRadius: 20,
     padding: 20,
+    marginBottom: 30,
   },
-
   shadow: {
     shadowColor: '#666666',
     shadowOpacity: 0.25,
@@ -37,12 +37,44 @@ const styles = StyleSheet.create({
       height: 2
     }
   },
+  top_right: {
+    position: 'absolute', 
+    right: 0, 
+    paddingTop: 50, 
+    paddingRight: 30,
+    shadowColor: '#718399',
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+    shadowOffset: {
+      width: 2,
+      height: 2
+    },
+  },
+  top_left: {
+    position: 'absolute', 
+    left: 0, 
+    paddingTop: 50, 
+    paddingLeft: 30,
+    shadowColor: '#718399',
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+    shadowOffset: {
+      width: 2,
+      height: 2
+    },
+  },
 
   // Text
   muli_w20: {
     fontFamily: 'Muli_400Regular',
     fontSize: 20,
     color: '#FFFFFF',
+    textAlign: 'center',
+  },
+  muli_b20: {
+    fontFamily: 'Muli_400Regular',
+    fontSize: 20,
+    color: '#666666',
     textAlign: 'center',
   },
   carrois_b30: {
