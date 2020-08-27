@@ -132,6 +132,11 @@ history_date_font: {
   fontSize: 20,
   textAlign: 'right',
   color: '#235789',
+},
+line_style: {
+  borderWidth: 1,
+  opacity: 0.25,
+  borderColor: '#666666',
 }
 });
 

@@ -8,6 +8,7 @@ import { AntDesign, Feather, MaterialCommunityIcons, FontAwesome, Ionicons } fro
 
 import styles from '../Styles';
 import Dock from '../components/Dock';
+import HistLog from '../components/HistLog';
 
 export class History extends Component {
 
@@ -15,9 +16,9 @@ export class History extends Component {
 
     return (
       <SafeAreaView style={styles.container}>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           {/* Header */}
-          <View style={{paddingBottom: 40}}>
+          <View style={{paddingBottom: 40, paddingTop: 60,}}>
             <Text style={styles.header_title}>
               history
             </Text>
@@ -27,11 +28,66 @@ export class History extends Component {
           </View>
 
           {/* Body */}
+
           <View style={[styles.cards, styles.shadow]}>
-            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-              <Text style={styles.carrois_b30}>{moment().format('dddd').toLowerCase()}</Text>
-              <Text style={styles.history_date_font}>{moment().format('MMMM DD, YYYY').toLowerCase()}</Text>
+            {/* Today */}
+            <HistLog day={0}/>
+            <View style={{paddingTop:20, paddingBottom:20}}>
+              <View style={styles.line_style}></View>
             </View>
+            <HistLog day={1}/>
+            <View style={{paddingTop:20, paddingBottom:20}}>
+              <View style={styles.line_style}></View>
+            </View>
+            <HistLog day={2}/>
+            <View style={{paddingTop:20, paddingBottom:20}}>
+              <View style={styles.line_style}></View>
+            </View>
+            <HistLog day={3}/>
+            <View style={{paddingTop:20, paddingBottom:20}}>
+              <View style={styles.line_style}></View>
+            </View>
+            <HistLog day={4}/>
+            <View style={{paddingTop:20, paddingBottom:20}}>
+              <View style={styles.line_style}></View>
+            </View>
+            <HistLog day={5}/>
+            <View style={{paddingTop:20, paddingBottom:20}}>
+              <View style={styles.line_style}></View>
+            </View>
+            <HistLog day={6}/>
+            <View style={{paddingTop:20, paddingBottom:20}}>
+              <View style={styles.line_style}></View>
+            </View>
+            <HistLog day={7}/>
+            <View style={{paddingTop:20, paddingBottom:20}}>
+              <View style={styles.line_style}></View>
+            </View>
+            <HistLog day={8}/>
+            <View style={{paddingTop:20, paddingBottom:20}}>
+              <View style={styles.line_style}></View>
+            </View>
+            <HistLog day={9}/>
+            <View style={{paddingTop:20, paddingBottom:20}}>
+              <View style={styles.line_style}></View>
+            </View>
+            <HistLog day={10}/>
+            <View style={{paddingTop:20, paddingBottom:20}}>
+              <View style={styles.line_style}></View>
+            </View>
+            <HistLog day={11}/>
+            <View style={{paddingTop:20, paddingBottom:20}}>
+              <View style={styles.line_style}></View>
+            </View>
+            <HistLog day={12}/>
+            <View style={{paddingTop:20, paddingBottom:20}}>
+              <View style={styles.line_style}></View>
+            </View>
+            <HistLog day={13}/>
+            <View style={{paddingTop:20, paddingBottom:20}}>
+              <View style={styles.line_style}></View>
+            </View>
+            <HistLog day={14}/>
           </View>
         </ScrollView>
 
