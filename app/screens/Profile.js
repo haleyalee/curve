@@ -71,6 +71,19 @@ export class Profile extends Component {
                 </View>
               </View>
             </View>
+
+            {/* Groups */}
+            <View style={[styles.cards, styles.shadow]}>
+              <Text style={[styles.carrois_b30, {paddingBottom: 10}]}>group</Text>
+              <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <Text style={[styles.muli_blk20, {textAlign: 'left'}]}>Sleepy</Text>
+                <MaterialCommunityIcons name="trash-can" size={24} color="#235789" />
+              </View>
+              <Text>
+                <Text style={[styles.muli_blk15, {textAlign: 'left'}]}>People: </Text>
+                <Text style={[styles.muli_blk15, {textAlign: 'left'}]}>@hal64, @tj223</Text>
+              </Text>
+            </View>
           </View>
 
           <View style={{height: 50}}></View>
