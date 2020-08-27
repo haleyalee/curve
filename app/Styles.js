@@ -92,6 +92,14 @@ urgent_alert: {
   borderRadius: 20,
   justifyContent: 'center',
   marginBottom: 30,
+},
+
+// History
+history_date_font: {
+  fontFamily: 'CarroisGothicSC_400Regular',
+  fontSize: 20,
+  textAlign: 'right',
+  color: '#235789',
 }
 });
 
