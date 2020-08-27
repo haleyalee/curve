@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { AntDesign, Feather, MaterialCommunityIcons, FontAwesome, Ionicons } from '@expo/vector-icons';
 
 import styles from '../Styles';
-// import Dock from '../components/Dock';
+import Dock from '../components/Dock';
 
 export class Home extends Component {
 
@@ -41,6 +41,10 @@ export class Home extends Component {
           <View>
 
           </View>
+
+          {/* Dock */}
+          <Dock navigation={this.props.navigation}/>
+
         </View>
       </View>
     )
