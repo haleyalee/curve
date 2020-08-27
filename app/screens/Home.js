@@ -5,6 +5,7 @@ import { View, Text, Button, SafeAreaView, ScrollView} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { MaterialIcons } from '@expo/vector-icons';
 
+import moment from 'moment';
 import styles from '../Styles';
 import Dock from '../components/Dock';
 
@@ -23,7 +24,7 @@ export class Home extends Component {
           {/* header */}
           <View style={{paddingTop: 60}}>
             <Text style={styles.header_title}>curve</Text>
-            <Text style={styles.header_date}>august 26, 2020</Text>
+            <Text style={styles.header_date}>{moment().format('MMMM DD, YYYY').toLowerCase()}</Text>
           </View>
 
           {/* buttons */}
