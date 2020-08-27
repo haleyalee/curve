@@ -10,6 +10,14 @@ import Dock from '../components/Dock';
 
 export class History extends Component {
 
+  dateRange=()=>{
+ 
+    var date = new Date().getDate();
+    var month = new Date().getMonth() + 1;
+    var year = new Date().getFullYear();
+    return()
+   }
+
   render() {
     return (
 
@@ -17,11 +25,11 @@ export class History extends Component {
 
         {/* Header */}
         <View>
-          <Text style={{fontFamily: 'DMSerifDisplay_400Regular'}}>
+          <Text style={styles.header_title}>
             history
           </Text>
-          <Text>
-            <Text style={{fontFamily: 'CarroisGothicSC_400Regular'}}>
+          <Text style={styles.header_date}>
+            <Text>
               first date
             </Text>
             <Text>

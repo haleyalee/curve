@@ -31,6 +31,20 @@ const styles = StyleSheet.create({
     height: 30,
   },
 
+  // Header
+  header_title: {
+    fontFamily: 'DMSerifDisplay_400Regular',
+    fontSize: 45,
+    color: '#235789',
+    textAlign: 'center'
+  },
+  header_date: {
+    fontFamily: 'Muli_400Regular',
+    fontSize: 20,
+    color: '#235789',
+    textAlign: 'center'
+  }
+
 });
 
 export default styles;
