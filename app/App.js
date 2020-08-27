@@ -12,6 +12,7 @@ import Login from "./screens/Login"
 import Home from "./screens/Home";
 import History from "./screens/History";
 import Profile from "./screens/Profile";
+import Notifications from "./screens/Notifications";
 
 
 const Stack = createStackNavigator();
@@ -48,6 +49,10 @@ function App() {
           <Stack.Screen
             name="ProfileScreen"
             component={Profile}
+          />
+          <Stack.Screen
+            name="NotifcationsScreen"
+            component={Notifications}
           />
         </Stack.Navigator>
       </NavigationContainer>
