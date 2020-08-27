@@ -14,7 +14,25 @@ export class History extends Component {
     return (
 
       <View style={styles.container}>
-       
+
+        {/* Header */}
+        <View>
+          <Text>
+            history
+          </Text>
+          <Text>
+            date
+          </Text>
+        </View>
+
+        {/* Body */}
+        <View>
+          
+        </View>
+
+        {/* Dock */}
+        <Dock navigation={this.props.navigation}/>
+
       </View>
     )
   }
