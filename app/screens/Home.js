@@ -30,7 +30,7 @@ export class Home extends Component {
 
         </View>
 
-        {/* urgent alerts */}
+        {/* Urgent alerts */}
         <View>
           {/* red */}
           <View>
@@ -41,10 +41,18 @@ export class Home extends Component {
           <View>
 
           </View>
+        </View>
 
-          {/* Dock */}
-          <Dock navigation={this.props.navigation}/>
+        {/* Cards */}
+        <View>
+          {/* Upcoming interactions */}
+          <View>
 
+          </View>
+          {/* Past */}
+          <View>
+            
+          </View>
         </View>
       </View>
     )
