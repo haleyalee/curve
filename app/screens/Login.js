@@ -14,8 +14,14 @@ export class Login extends Component {
     return (
 
       <View style={styles.container}>
+
+
+        {/* Dock */}
+        <Dock navigation={this.props.navigation}/>
        
       </View>
+
+      
     )
   }
 }
