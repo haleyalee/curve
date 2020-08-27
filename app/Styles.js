@@ -65,13 +65,19 @@ const styles = StyleSheet.create({
   },
 
   // Text
+  muli_b15: {
+    fontFamily: 'Muli_400Regular',
+    fontSize: 15,
+    color: '#235789',
+    textAlign: 'center',
+  },
   muli_w20: {
     fontFamily: 'Muli_400Regular',
     fontSize: 20,
     color: '#FFFFFF',
     textAlign: 'center',
   },
-  muli_b20: {
+  muli_blk20: {
     fontFamily: 'Muli_400Regular',
     fontSize: 20,
     color: '#666666',
