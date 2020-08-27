@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    // backgroundColor: '#000',//'#AEC9EB',
+    backgroundColor: '#FFFFFF',//'#AEC9EB',
     paddingTop: 100,
     alignItems: 'center',
     // justifyContent: 'center',
@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
   // Dock
   dock_container: {
     width: 414, 
-    height: 100, 
-    backgroundColor: '#AEC9EB', 
+    height: 80, 
+    backgroundColor: '#FFFFFF', 
     position: 'absolute', 
     bottom: 0,
     flex: 1,
