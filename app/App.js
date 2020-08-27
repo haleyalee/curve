@@ -51,7 +51,7 @@ function App() {
             component={Profile}
           />
           <Stack.Screen
-            name="NotifcationsScreen"
+            name="NotificationsScreen"
             component={Notifications}
           />
         </Stack.Navigator>

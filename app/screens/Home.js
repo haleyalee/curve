@@ -18,7 +18,7 @@ export class Home extends Component {
         <ScrollView showsVerticalScrollIndicator={false}>
           {/* notifications bell */}
           <View style={styles.top_right}>
-            <MaterialIcons name="notifications" size={30} color="#235789" onPress={() => this.props.navigation.navigate('HomeScreen')}/>
+            <MaterialIcons name="notifications" size={30} color="#235789" onPress={() => this.props.navigation.navigate('NotificationsScreen')} />
           </View>
 
           {/* header */}
