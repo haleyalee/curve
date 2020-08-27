@@ -14,7 +14,33 @@ export class History extends Component {
     return (
 
       <View style={styles.container}>
-       
+
+        {/* Header */}
+        <View>
+          <Text style={{fontFamily: 'DMSerifDisplay_400Regular'}}>
+            history
+          </Text>
+          <Text>
+            <Text style={{fontFamily: 'CarroisGothicSC_400Regular'}}>
+              first date
+            </Text>
+            <Text>
+              -
+            </Text>
+            <Text>
+              second date
+            </Text>
+          </Text>
+        </View>
+
+        {/* Body */}
+        <View>
+
+        </View>
+
+        {/* Dock */}
+        <Dock navigation={this.props.navigation}/>
+
       </View>
     )
   }

@@ -1,8 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { AppLoading } from 'expo';
+import { useFonts, DMSerifDisplay_400Regular } from '@expo-google-fonts/dm-serif-display';
+import { CarroisGothicSC_400Regular } from '@expo-google-fonts/carrois-gothic-sc';
+import { Muli_400Regular} from '@expo-google-fonts/muli';
 
 import Login from "./screens/Login"
 import Home from "./screens/Home";
@@ -12,10 +16,20 @@ import Profile from "./screens/Profile";
 
 const Stack = createStackNavigator();
 
-export default class App extends Component {
-  render() {
-    return (
-      <NavigationContainer>
+function App() {
+
+  let [fontsLoaded] = useFonts({
+    DMSerifDisplay_400Regular,
+    CarroisGothicSC_400Regular,
+    Muli_400Regular,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
+  return (
+    <NavigationContainer>
          <Stack.Navigator 
           initialRouteName="Home"
           screenOptions={{ headerShown: false}}>
@@ -37,6 +51,38 @@ export default class App extends Component {
           />
         </Stack.Navigator>
       </NavigationContainer>
-    )
-  }
+  )
 }
+
+export default App
+
+
+// export default class App extends Component {
+
+//   render() {
+//     return (
+//       <NavigationContainer>
+//          <Stack.Navigator 
+//           initialRouteName="Home"
+//           screenOptions={{ headerShown: false}}>
+//           <Stack.Screen
+//             name="LoginScreen"
+//             component={Login}
+//           />
+//           <Stack.Screen
+//             name="HomeScreen"
+//             component={Home}
+//           />
+//           <Stack.Screen
+//             name="HistoryScreen"
+//             component={History}
+//           />
+//           <Stack.Screen
+//             name="ProfileScreen"
+//             component={Profile}
+//           />
+//         </Stack.Navigator>
+//       </NavigationContainer>
+//     )
+//   }
+// }

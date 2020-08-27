@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     flex: 1,
     // backgroundColor: '#000',//'#AEC9EB',
     paddingTop: 100,
-    // alignItems: 'center',
+    alignItems: 'center',
     // justifyContent: 'center',
   },
   // Dock
