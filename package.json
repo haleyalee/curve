@@ -8,10 +8,13 @@
     "test": "jest"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
     "@expo-google-fonts/carrois-gothic-sc": "^0.1.0",
     "@expo-google-fonts/dm-serif-display": "^0.1.0",
     "@expo-google-fonts/inter": "^0.1.0",
     "@expo-google-fonts/muli": "^0.1.0",
+>>>>>>> a7503a7e7e51eacab2d0b7e7345ee3dca2752310
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/native": "^5.7.3",
     "@react-navigation/stack": "^5.9.0",
