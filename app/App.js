@@ -13,6 +13,7 @@ import Home from "./screens/Home";
 import History from "./screens/History";
 import Profile from "./screens/Profile";
 import Notifications from "./screens/Notifications";
+import CreateInvite from "./screens/CreateInvite";
 
 
 const Stack = createStackNavigator();
@@ -51,8 +52,12 @@ function App() {
             component={Profile}
           />
           <Stack.Screen
-            name="NotifcationsScreen"
+            name="NotificationsScreen"
             component={Notifications}
+          />
+          <Stack.Screen
+            name="CreateInviteScreen"
+            component={CreateInvite}
           />
         </Stack.Navigator>
       </NavigationContainer>

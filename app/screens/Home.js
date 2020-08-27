@@ -34,8 +34,8 @@ export class Home extends Component {
               <Text style={styles.muli_w20}>Scan Me</Text>
             </View>
             {/* Create invite */}
-            <View style={[styles.button, styles.shadow]}>
-              <Text style={styles.muli_w20}>Create Invite</Text>
+            <View style={[styles.button, styles.shadow]}  >
+              <Text style={styles.muli_w20} onPress={() => this.props.navigation.navigate('CreateInviteScreen')}>Create Invite</Text>
             </View>
           </View>
 
