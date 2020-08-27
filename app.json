@@ -1,0 +1,12 @@
+{
+  "name": "Curve",
+  "displayName": "Curve",
+  "expo": {
+    "name": "Curve",
+    "slug": "Curve",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
