@@ -12,7 +12,37 @@ export class Home extends Component {
 
   render() {
     return (
-      pass
+
+      <View>
+        {/* notifications bell */}
+
+        {/* header */}
+        <View>
+          <Text>curve</Text>
+          <Text>august 26, 2020</Text>
+        </View>
+
+        {/* buttons */}
+        <View>
+          {/* Scan me */}
+
+          {/* Create invite */}
+
+        </View>
+
+        {/* urgent alerts */}
+        <View>
+          {/* red */}
+          <View>
+
+          </View>
+
+          {/* yellow */}
+          <View>
+
+          </View>
+        </View>
+      </View>
     )
   }
 }
