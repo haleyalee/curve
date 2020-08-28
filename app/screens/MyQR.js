@@ -7,7 +7,6 @@ import { MaterialIcons, Feather, AntDesign } from '@expo/vector-icons';
 
 import moment from 'moment';
 import styles from '../Styles';
-import Dock from '../components/Dock';
 import ScanDock from '../components/ScanDock';
 
 export class MyQR extends Component {

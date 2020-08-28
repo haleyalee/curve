@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
   scan_dock_container: {
     width: 335, 
     height: 74, 
-    backgroundColor: '#FFFFFF', 
+    backgroundColor: 'rgba(0,0,0,0)', 
     position: 'absolute', 
     top: 119,
     flex: 1,
@@ -149,6 +149,10 @@ const styles = StyleSheet.create({
   scan_dock_div: {
     borderLeftWidth: 1,
     borderLeftColor: '#666666',
+  },
+  scan_dock_div_w: {
+    borderLeftWidth: 1,
+    borderLeftColor: '#FFFFFF',
   },
   
   // Search Bar
