@@ -14,6 +14,7 @@ import History from "./screens/History";
 import Profile from "./screens/Profile";
 import Notifications from "./screens/Notifications";
 import CreateInvite from "./screens/CreateInvite";
+import AddID from "./screens/AddID";
 
 
 const Stack = createStackNavigator();
@@ -58,6 +59,10 @@ function App() {
           <Stack.Screen
             name="CreateInviteScreen"
             component={CreateInvite}
+          />
+          <Stack.Screen
+            name="AddIDScreen"
+            component={AddID}
           />
         </Stack.Navigator>
       </NavigationContainer>
