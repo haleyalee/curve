@@ -18,6 +18,7 @@ import AddID from "./screens/AddID";
 import MyQR from "./screens/MyQR";
 import ConfirmationRec from "./screens/ConfirmationRec";
 import ConfirmationSen from "./screens/ConfirmationSen";
+import Scan from "./screens/Scan";
 
 
 const Stack = createStackNavigator();
@@ -78,6 +79,10 @@ function App() {
           <Stack.Screen
             name="ConfirmationSenScreen"
             component={ConfirmationSen}
+          />
+          <Stack.Screen
+            name="ScanScreen"
+            component={Scan}
           />
         </Stack.Navigator>
       </NavigationContainer>
