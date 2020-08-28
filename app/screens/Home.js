@@ -17,9 +17,10 @@ export class Home extends Component {
       <SafeAreaView style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
           {/* notifications bell */}
-          <View style={styles.top_right}>
-            <MaterialIcons name="notifications" size={30} color="#235789"/>
+          <View style={styles.top_right} >
+            <MaterialIcons name="notifications" size={30} color="#235789"  onPress={() => this.props.navigation.navigate('NotificationsScreen')} />
           </View>
+
 
           {/* header */}
           <View style={{paddingTop: 60}}>

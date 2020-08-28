@@ -39,10 +39,11 @@ const styles = StyleSheet.create({
   },
   top_right: {
     position: 'absolute', 
+    zIndex: 1,
     right: 0, 
     paddingTop: 50, 
     paddingRight: 30,
-    shadowColor: '#718399',
+    shadowColor: '#000000',
     shadowOpacity: 0.5,
     shadowRadius: 4,
     shadowOffset: {
@@ -52,10 +53,11 @@ const styles = StyleSheet.create({
   },
   top_left: {
     position: 'absolute', 
+    zIndex: 1,
     left: 0, 
     paddingTop: 50, 
     paddingLeft: 30,
-    shadowColor: '#718399',
+    shadowColor: '#000000',
     shadowOpacity: 0.5,
     shadowRadius: 4,
     shadowOffset: {
@@ -141,6 +143,16 @@ const styles = StyleSheet.create({
   scan_dock_div: {
     borderLeftWidth: 1,
     borderLeftColor: '#666666',
+  },
+  
+  // Search Bar
+  search: {
+    width: 354,
+    height: 50,
+    backgroundColor: '#FBFBFB',
+    borderRadius: 100,
+    padding: 10,
+    alignContent: 'center',
   },
 
  // Header
