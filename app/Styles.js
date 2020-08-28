@@ -83,6 +83,12 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     textAlign: 'center',
   },
+  muli_b20: {
+    fontFamily: 'Muli_400Regular',
+    fontSize: 20,
+    color: '#235789',
+    textAlign: 'center',
+  },
   muli_blk20: {
     fontFamily: 'Muli_400Regular',
     fontSize: 20,
