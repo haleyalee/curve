@@ -138,6 +138,15 @@ urgent_alert: {
   marginBottom: 30,
 },
 
+// Create Invite
+invite_bubbles: {
+  backgroundColor: '#FBFBFB',
+  height: 45,
+  borderRadius: 20,
+  padding: 10,
+  marginBottom: 30,
+},
+
 // History
 history_date_font: {
   fontFamily: 'CarroisGothicSC_400Regular',
