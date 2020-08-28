@@ -15,6 +15,7 @@ import Profile from "./screens/Profile";
 import Notifications from "./screens/Notifications";
 import CreateInvite from "./screens/CreateInvite";
 import AddID from "./screens/AddID";
+import MyQR from "./screens/MyQR";
 
 
 const Stack = createStackNavigator();
@@ -63,6 +64,10 @@ function App() {
           <Stack.Screen
             name="AddIDScreen"
             component={AddID}
+          />
+          <Stack.Screen
+            name="MyQRScreen"
+            component={MyQR}
           />
         </Stack.Navigator>
       </NavigationContainer>
