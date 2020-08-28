@@ -31,7 +31,7 @@ export class Home extends Component {
           <View style={{flexDirection: 'row', paddingLeft: 30, paddingTop: 40,}}>
             {/* Scan me */}
             <View style={[styles.button, styles.shadow]}>
-              <Text style={styles.muli_w20} onPress={() => this.props.navigation.navigate('NotificationsScreen')}>Scan Me</Text>
+              <Text style={styles.muli_w20} onPress={() => this.props.navigation.navigate('MyQRScreen')}>Scan Me</Text>
             </View>
             {/* Create invite */}
             <View style={[styles.button, styles.shadow]}  >

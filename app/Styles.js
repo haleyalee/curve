@@ -115,6 +115,28 @@ const styles = StyleSheet.create({
     height: 30,
   },
 
+  //ScanDock
+  scan_dock_container: {
+    width: 335, 
+    height: 74, 
+    backgroundColor: '#FFFFFF', 
+    position: 'absolute', 
+    top: 119,
+    flex: 1,
+    alignContent: 'center',
+    justifyContent: 'center',
+    paddingLeft:15,
+    paddingRight:15,
+  },
+  scan_dock:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  scan_dock_div: {
+    borderLeftWidth: 1,
+    borderLeftColor: '#666666',
+  },
+
  // Header
  header_title: {
   fontFamily: 'DMSerifDisplay_400Regular',
