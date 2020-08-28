@@ -16,6 +16,8 @@ import Notifications from "./screens/Notifications";
 import CreateInvite from "./screens/CreateInvite";
 import AddID from "./screens/AddID";
 import MyQR from "./screens/MyQR";
+import ConfirmationRec from "./screens/ConfirmationRec";
+import ConfirmationSen from "./screens/ConfirmationSen";
 
 
 const Stack = createStackNavigator();
@@ -68,6 +70,14 @@ function App() {
           <Stack.Screen
             name="MyQRScreen"
             component={MyQR}
+          />
+          <Stack.Screen
+            name="ConfirmationRecScreen"
+            component={ConfirmationRec}
+          />
+          <Stack.Screen
+            name="ConfirmationSenScreen"
+            component={ConfirmationSen}
           />
         </Stack.Navigator>
       </NavigationContainer>

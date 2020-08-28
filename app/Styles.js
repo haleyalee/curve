@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
   },
   button: {
-    minWidth: 160,
+    minWidth: 140,
     height: 40,
     backgroundColor: '#235789',
     borderRadius: 20,
@@ -103,6 +103,12 @@ const styles = StyleSheet.create({
     color: '#235789',
     // textAlign: 'center'
   },
+  muli_b30: {
+    fontFamily: 'Muli_400Regular',
+    fontSize: 30,
+    color: '#235789',
+    textAlign: 'center',
+  },
   // Dock
   dock_container: {
     width: 414, 
@@ -153,6 +159,18 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     padding: 10,
     alignContent: 'center',
+  },
+
+  // Confirm Bubble
+  confirm_bubble: {
+    width: 354,
+    minHeight: 245,
+    backgroundColor: '#FBFBFB',
+    borderRadius: 20,
+    alignItems: 'center',
+    position: 'absolute',
+    top: 326,
+    padding: 20,
   },
 
  // Header

@@ -15,12 +15,13 @@ export class Home extends Component {
     return (
 
       <SafeAreaView style={styles.container}>
-        <ScrollView showsVerticalScrollIndicator={false}>
-          {/* notifications bell */}
-          <View style={styles.top_right} >
-            <MaterialIcons name="notifications" size={30} color="#235789"  onPress={() => this.props.navigation.navigate('NotificationsScreen')} />
-          </View>
 
+        {/* notifications bell */}
+        <View style={styles.top_right} >
+          <MaterialIcons name="notifications" size={30} color="#235789"  onPress={() => this.props.navigation.navigate('NotificationsScreen')} />
+        </View>
+
+        <ScrollView showsVerticalScrollIndicator={false}>
 
           {/* header */}
           <View style={{paddingTop: 60}}>
@@ -29,14 +30,16 @@ export class Home extends Component {
           </View>
 
           {/* buttons */}
-          <View style={{flexDirection: 'row', paddingLeft: 30, paddingTop: 40,}}>
-            {/* Scan me */}
-            <View style={[styles.button, styles.shadow]}>
-              <Text style={styles.muli_w20} onPress={() => this.props.navigation.navigate('MyQRScreen')}>Scan Me</Text>
-            </View>
-            {/* Create invite */}
-            <View style={[styles.button, styles.shadow]}  >
-              <Text style={styles.muli_w20} onPress={() => this.props.navigation.navigate('CreateInviteScreen')}>Create Invite</Text>
+          <View style={{alignItems: 'center'}}>
+            <View style={{flexDirection: 'row', paddingLeft: 30, paddingRight: 30, paddingTop: 40,}}>
+              {/* Scan me */}
+              <View style={[styles.button, styles.shadow]}>
+                <Text style={styles.muli_w20} onPress={() => this.props.navigation.navigate('MyQRScreen')}>Scan Me</Text>
+              </View>
+              {/* Create invite */}
+              <View style={[styles.button, styles.shadow]}  >
+                <Text style={styles.muli_w20} onPress={() => this.props.navigation.navigate('CreateInviteScreen')}>Create Invite</Text>
+              </View>
             </View>
           </View>
 
