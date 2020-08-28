@@ -65,6 +65,10 @@ export class CreateInvite extends Component {
 
         </View>
 
+        <View style={[styles.button, {position: 'absolute', bottom: 150}]}>
+          <Text style={styles.muli_w20}>Create Invite</Text>
+        </View>
+
         {/* Dock */}
         <Dock navigation={this.props.navigation}/>
 
