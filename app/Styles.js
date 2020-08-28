@@ -216,7 +216,23 @@ line_style: {
   borderWidth: 1,
   opacity: 0.25,
   borderColor: '#666666',
-}
+},
+
+dropdown_style: {
+  backgroundColor: '#fbfbfb',
+  borderBottomLeftRadius: 20,
+  borderBottomRightRadius: 20,
+  borderTopLeftRadius: 20,
+  borderTopRightRadius: 20,
+},
+dropdown_dropdownstyle: {
+  backgroundColor: '#fafafa',
+  marginTop: 5,
+  borderBottomLeftRadius: 20,
+  borderBottomRightRadius: 20,
+  borderTopLeftRadius: 20,
+  borderTopRightRadius: 20,
+},
 });
 
 
