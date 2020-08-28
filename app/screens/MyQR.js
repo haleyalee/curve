@@ -27,9 +27,11 @@ export class MyQR extends Component {
 
         {/* QR Code */}
         <View style={{paddingTop: 200}}>
-          <AntDesign name="qrcode" size={300} color="#235789" />
+          {/* <AntDesign name="qrcode" size={300} color="#235789" style={{zIndex: -1}}/> */}
+          <Text>QR CODE HERE</Text>
         </View>
         
+      
         <Text style={[styles.muli_b30]}>
           <Text>Username:</Text>
           <Text> tj223</Text>
