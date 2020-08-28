@@ -16,7 +16,7 @@ export class MyQR extends Component {
     return (
 
       <View style={styles.container}>
-        <ScanDock qr={true} scan={false} id={false} navigation={this.props.navigation}/>
+        <ScanDock num={'myqrscreen'} navigation={this.props.navigation}/>
           {/* notifications bell */}
           <View style={styles.top_right}>
             <Feather name="x" size={30} color="#235789" onPress={() => this.props.navigation.navigate('HomeScreen')}/>

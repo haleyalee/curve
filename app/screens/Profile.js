@@ -92,7 +92,7 @@ export class Profile extends Component {
           
 
         {/* Dock */}
-        <Dock navigation={this.props.navigation}/>
+        <Dock num={'profilescreen'} navigation={this.props.navigation}/>
 
       </SafeAreaView>
     )

@@ -18,7 +18,7 @@ export class AddID extends Component {
         <ScrollView showsVerticalScrollIndicator={false}>
 
           {/* Scan Dock */}
-          <ScanDock navigation={this.props.navigation}/>
+          <ScanDock num={'addidscreen'} navigation={this.props.navigation}/>
 
           {/* X button */}
           <View style={styles.top_right}>

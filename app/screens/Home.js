@@ -101,7 +101,7 @@ export class Home extends Component {
         </ScrollView>
 
         {/* Dock */}
-        <Dock navigation={this.props.navigation}/>
+        <Dock num={'homescreen'} navigation={this.props.navigation}/>
 
       </SafeAreaView>
     )

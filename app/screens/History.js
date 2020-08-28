@@ -92,7 +92,7 @@ export class History extends Component {
         </ScrollView>
 
         {/* Dock */}
-        <Dock navigation={this.props.navigation}/>
+        <Dock num={'historyscreen'} navigation={this.props.navigation}/>
 
       </SafeAreaView>
     )
