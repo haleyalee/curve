@@ -3,11 +3,17 @@
 import React, { Component } from 'react';
 import { View, Text, Button, ScrollView, SafeAreaView, } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import * as Linking from 'expo-linking';
 
 import styles from '../Styles';
 import Dock from '../components/Dock';
 
 export class Profile extends Component {
+
+  _scheduleTest = () => {
+    Linking.openURL("https://register.cayugahealth.com/patient-registration");
+    this.props.onPress && this.props.onPress();
+  };
 
   render() {
     return (
@@ -67,7 +73,7 @@ export class Profile extends Component {
               <View>
                 <Text style={[styles.carrois_b30, {paddingBottom: 10}]}>schedule test</Text>
                 <View style={styles.button}>
-                  <Text style={styles.muli_w20}>Cayuga Medical Portal</Text>
+                  <Text style={styles.muli_w20} onPress={this._scheduleTest}>Cayuga Medical Portal</Text>
                 </View>
               </View>
             </View>

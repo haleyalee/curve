@@ -12,24 +12,24 @@ export class AddID extends Component {
 
   render() {
     return (
-      <SafeAreaView style={[styles.container]}>
-      {/* <View style={styles.container}> */}
+      <SafeAreaView style={[styles.container, {paddingTop: 0}]}>
+      {/* <View style={[styles.container, {paddingTop: 0}]}> */}
 
           {/* X button */}
-          <View style={styles.top_right}>
+          <View style={[styles.top_right, {paddingBottom: 0}]}>
             <Feather name="x" size={30} color="#235789" onPress={() => this.props.navigation.navigate('HomeScreen')}/>
           </View>
 
-        <ScrollView showsVerticalScrollIndicator={false} >
+        <ScrollView showsVerticalScrollIndicator={false} style={{paddingTop: 0}}>
 
           {/* Scan Dock */}
-          <View style={{alignItems: 'center'}}>
-            <ScanDock num={'addidscreen'} navigation={this.props.navigation}/>
+          <View style={{alignItems: 'center', paddingTop: 0, paddingBottom: 200}}>
+            <ScanDock navigation={this.props.navigation} num={"addidscreen"}/>
           </View>
 
           {/* Search bar */}
           <View style={{paddingLeft: 30, paddingRight: 30, paddingBottom: 30,}}>
-            <Text style={[styles.carrois_b30, {paddingTop: 200, textAlign: 'center'} ]}>search</Text>
+            <Text style={[styles.carrois_b30, {textAlign: 'center'} ]}>search</Text>
             <View style={[styles.search, styles.shadow, {marginTop: 10}]}>
               <Text>
                 <Entypo name="magnifying-glass" size={25} color="#235789"/>
@@ -74,6 +74,7 @@ export class AddID extends Component {
           <View style={styles.button}>
             <Text onPress={() => this.props.navigation.navigate('ConfirmationRecScreen')}>Confirmation Rec</Text>
           </View>
+
 
           <View style={{height: 100}}></View>
           
