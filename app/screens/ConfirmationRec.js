@@ -15,7 +15,7 @@ export class ConfirmationRec extends Component {
   render() {
     return (
 
-      <View style={styles.container}>
+      <View style={[styles.container, {opacity: 0.5}]}>
 
         {/* Scan Dock */}
         <ScanDock navigation={this.props.navigation}/>
