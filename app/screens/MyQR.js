@@ -15,10 +15,12 @@ export class MyQR extends Component {
   render() {
     return (
 
-      <View style={styles.container}>
+      <View style={[styles.container, {paddingTop: 0}]}>
 
         {/* Scan Dock */}
-        <ScanDock num={'myqrscreen'} navigation={this.props.navigation}/>
+        <View style={{alignItems: 'center', paddingTop: 0, paddingBottom: 300}}>
+          <ScanDock num={'myqrscreen'} navigation={this.props.navigation}/>
+        </View>
         
         {/* X button */}
         <View style={styles.top_right}>
@@ -26,9 +28,9 @@ export class MyQR extends Component {
         </View>
 
         {/* QR Code */}
-        <View style={{paddingTop: 200}}>
-          {/* <AntDesign name="qrcode" size={300} color="#235789" style={{zIndex: -1}}/> */}
-          <Text>QR CODE HERE</Text>
+        <View >
+          <AntDesign name="qrcode" size={300} color="#235789" style={{zIndex: -1}}/>
+          {/* <Text>QR CODE HERE</Text> */}
         </View>
         
       
