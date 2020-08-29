@@ -55,6 +55,7 @@ export class CreateInvite extends Component {
               <View style={[{width: 150}]}>
                 {/* <Text style={styles.muli_blk20}>August</Text> */}
                 <DropDownPicker
+                  scrollViewProps={showVerticalScrollIndicator=true}
                   items={[
                       {label: 'January', value: 'january'},
                       {label: 'February', value: 'february'},

@@ -9,7 +9,7 @@ import styles from '../Styles';
 function HistLog(day) {
   return ( 
     <View>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between', paddingBottom: 5}}>
+      <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingBottom: 5}}>
         <Text style={styles.carrois_b30}>{moment().subtract(day,'d').format('dddd').toLowerCase()}</Text>
         <Text style={styles.history_date_font}>{moment().subtract(day,'d').format('MMMM DD, YYYY').toLowerCase()}</Text>
       </View>
