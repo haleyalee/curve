@@ -2,9 +2,18 @@
 steps:
   # build & push the container image
 - name: "gcr.io/kaniko-project/executor:latest"
+<<<<<<< HEAD
   args: ["--cache=true", "--cache-ttl=48h", "--destination=gcr.io/curve-cf6d3/todo:latest"]
   # Deploy container image to Cloud Run
 - name: "gcr.io/cloud-builders/gcloud"
   args: ['auth', 'activate-service-account', '829138154915-compute@developer.gserviceaccount.com', '--key-file=key.json']
 - name: "gcr.io/cloud-builders/gcloud"
   args: ['beta', 'run', 'deploy', 'todo', '--image', 'gcr.io/curve-cf6d3/todo:latest', '--region', 'us-central1', '--allow-unauthenticated', '--platform', 'managed']
+=======
+  args: ["--cache=true", "--cache-ttl=48h", "--destination=gcr.io/curve-13015/todo:latest"]
+  # Deploy container image to Cloud Run
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ['auth', 'activate-service-account', '666717490018-compute@developer.gserviceaccount.com', '--key-file=key.json']
+- name: "gcr.io/cloud-builders/gcloud"
+  args: ['beta', 'run', 'deploy', 'todo', '--image', 'gcr.io/curve-13015/todo:latest', '--region', 'us-central1', '--allow-unauthenticated', '--platform', 'managed']
+>>>>>>> c1d3e80be0a4af64f18da19c56df6889074403ec

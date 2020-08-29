@@ -1,7 +1,7 @@
 // History.js
 
 import React, { useState, Component } from 'react';
-import { View, Text, Button, ScrollView, SafeAreaView, } from 'react-native';
+import { View, Text, Button, ScrollView, SafeAreaView, Alert } from 'react-native';
 import moment from 'moment';
 import { LinearGradient } from 'expo-linear-gradient';
 import { AntDesign, Feather, MaterialCommunityIcons, FontAwesome, Ionicons } from '@expo/vector-icons';
@@ -9,8 +9,34 @@ import { AntDesign, Feather, MaterialCommunityIcons, FontAwesome, Ionicons } fro
 import styles from '../Styles';
 import Dock from '../components/Dock';
 import HistLog from '../components/HistLog';
+// import { db } from '../config';
+
+// let addPerson = person => {
+//   db.ref('/persons').push({
+//     netid: person,
+//   });
+// };
 
 export class History extends Component {
+
+  // constructor() {
+  //   super();
+    
+  //   this.state = {
+  //     netid: '',
+  //   }
+  // };
+
+  // handleChange = e => {
+  //   this.setState({
+  //     netid: e.nativeEvent.text
+  //   });
+  // };
+
+  // handleSubmit = () => {
+  //   addPerson(this.state.netid);
+  //   Alert.alert("Added person or smth");
+  // }
 
   render() {
 
