@@ -5,7 +5,7 @@ from db import Person
 from db import History
 
 # define db filename
-db_filename = "curve.db"
+db_filename = "todo.db"
 app = Flask(__name__)
 
 # setup config
@@ -108,4 +108,4 @@ def create_history(netid):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(threaded=True, host='0.0.0.0', port=8080)
