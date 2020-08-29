@@ -1,7 +1,7 @@
 // AddID.js
 
 import React, { useState, Component } from 'react';
-import { View, Text, Button, ScrollView, SafeAreaView, } from 'react-native';
+import { View, Text, TextInput, ScrollView, SafeAreaView, } from 'react-native';
 import { Feather, Entypo, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import styles from '../Styles';
@@ -9,6 +9,17 @@ import Dock from '../components/Dock';
 import ScanDock from '../components/ScanDock';
 
 export class AddID extends Component {
+
+  // handleChange = (text) => {
+  //   this.setState({
+  //     contact: text
+  //   });
+  // };
+
+  // handleSubmit = () => {
+  //   addPerson(this.state.contact);
+  //   Alert.alert("Added person or smth");
+  // }
 
   render() {
     return (
@@ -31,10 +42,16 @@ export class AddID extends Component {
           <View style={{paddingLeft: 30, paddingRight: 30, paddingBottom: 30,}}>
             <Text style={[styles.carrois_b30, {textAlign: 'center'} ]}>search</Text>
             <View style={[styles.search, styles.shadow, {marginTop: 10}]}>
-              <Text>
+              <View style={{flexDirection: 'row', justifyContent: 'flex-start'}}>
                 <Entypo name="magnifying-glass" size={25} color="#235789"/>
                 <Text style={styles.muli_blk15}>   Search NetID</Text>
-              </Text>
+                {/* <TextInput 
+                  style={styles.muli_blk15}
+                  placeholder="Search NetID"
+                  placeholderTextColor="#666666"
+                  onChangeText={this.handleChange} 
+                /> */}
+              </View>
             </View>
           </View>
 
