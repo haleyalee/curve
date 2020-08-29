@@ -10,11 +10,11 @@ import ScanDock from '../components/ScanDock';
 
 export class AddID extends Component {
 
-  // handleChange = (text) => {
-  //   this.setState({
-  //     contact: text
-  //   });
-  // };
+  handleChange = (text) => {
+    this.setState({
+      contact: text
+    });
+  };
 
   // handleSubmit = () => {
   //   addPerson(this.state.contact);
@@ -42,15 +42,17 @@ export class AddID extends Component {
           <View style={{paddingLeft: 30, paddingRight: 30, paddingBottom: 30,}}>
             <Text style={[styles.carrois_b30, {textAlign: 'center'} ]}>search</Text>
             <View style={[styles.search, styles.shadow, {marginTop: 10}]}>
-              <View style={{flexDirection: 'row', justifyContent: 'flex-start'}}>
+              <View style={{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center'}}>
                 <Entypo name="magnifying-glass" size={25} color="#235789"/>
-                <Text style={styles.muli_blk15}>   Search NetID</Text>
-                {/* <TextInput 
-                  style={styles.muli_blk15}
-                  placeholder="Search NetID"
-                  placeholderTextColor="#666666"
-                  onChangeText={this.handleChange} 
-                /> */}
+                {/* <Text style={styles.muli_blk15}>   Search NetID</Text> */}
+                <View style={{paddingLeft: 20}}>
+                  <TextInput 
+                    style={[styles.muli_blk15]}
+                    placeholder="Search NetID"
+                    placeholderTextColor="#666666"
+                    onChangeText={this.handleChange} 
+                  />
+                </View>
               </View>
             </View>
           </View>
@@ -62,11 +64,11 @@ export class AddID extends Component {
               <View style={{alignItems: 'flex-start'}}>
                 <View style={{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', paddingTop: 10}}>
                   <MaterialCommunityIcons name="account-circle" size={30} color="#235789" />
-                  <Text style={styles.muli_blk20}>   Group</Text>
+                  <Text style={styles.muli_blk20}>   @Sleepy</Text>
                 </View>
                 <View style={{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', paddingTop: 10}}>
                   <MaterialCommunityIcons name="account-circle" size={30} color="#235789" />
-                  <Text style={styles.muli_blk20}>   NetID: Name</Text>
+                  <Text style={styles.muli_blk20}>   @abc123: Adam Chase</Text>
                 </View>
               </View>
             </View>
@@ -76,21 +78,25 @@ export class AddID extends Component {
               <Text style={[styles.carrois_b30]}>contacts</Text>
               <View style={{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', paddingTop: 10}}>
                 <MaterialCommunityIcons name="account-circle" size={30} color="#235789" />
-                <Text style={styles.muli_blk20}>   Group</Text>
+                <Text style={styles.muli_blk20}>   @Sleepy</Text>
               </View>
               <View style={{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', paddingTop: 10}}>
                 <MaterialCommunityIcons name="account-circle" size={30} color="#235789" />
-                <Text style={styles.muli_blk20}>   NetID: Name</Text>
+                <Text style={styles.muli_blk20}>   @abc123: Adam Chase</Text>
+              </View>
+              <View style={{flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', paddingTop: 10}}>
+                <MaterialCommunityIcons name="account-circle" size={30} color="#235789" />
+                <Text style={styles.muli_blk20}>   @def456: Danielle Forman</Text>
               </View>
             </View>
           </View>
 
-          <View style={styles.button}>
+          {/* <View style={styles.button}>
             <Text onPress={() => this.props.navigation.navigate('ConfirmationSenScreen')}>Confirmation Sen</Text>
           </View>
           <View style={styles.button}>
             <Text onPress={() => this.props.navigation.navigate('ConfirmationRecScreen')}>Confirmation Rec</Text>
-          </View>
+          </View> */}
 
 
           <View style={{height: 100}}></View>

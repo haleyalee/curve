@@ -9,7 +9,7 @@ import moment from 'moment';
 import styles from '../Styles';
 import Dock from '../components/Dock';
 
-export class Home extends Component {
+export class HomeEvent extends Component {
 
   render() {
     return (
@@ -76,15 +76,15 @@ export class Home extends Component {
             <View style={[styles.cards, styles.shadow]}>
               <Text style={[styles.carrois_b30, {paddingBottom: 10}]}>upcoming</Text>
 
-              <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+              {/* <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                 <Text style={styles.muli_blk20}>no upcoming interactions</Text>
                 <Text style={styles.muli_blk20}></Text>
-              </View>
-
-              {/* <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                <Text style={styles.muli_blk20}>2:00 pm</Text>
-                <Text style={styles.muli_blk20}>@hal64</Text>
               </View> */}
+
+              <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <Text style={styles.muli_blk20}>8:00 pm</Text>
+                <Text style={styles.muli_blk20}>@hal64</Text>
+              </View>
               
             </View>
             {/* Past */}
@@ -120,4 +120,4 @@ export class Home extends Component {
   }
 }
 
-export default Home;
+export default HomeEvent;

@@ -55,7 +55,6 @@ export class CreateInvite extends Component {
               <View style={[{width: 150}]}>
                 {/* <Text style={styles.muli_blk20}>August</Text> */}
                 <DropDownPicker
-                  scrollViewProps={showVerticalScrollIndicator=true}
                   items={[
                       {label: 'January', value: 'january'},
                       {label: 'February', value: 'february'},
@@ -214,7 +213,10 @@ export class CreateInvite extends Component {
                 {/* <Text style={styles.muli_blk20}>30</Text> */}
                 <DropDownPicker
                   items={[
+                      {label: '00', value: '0'},
                       {label: '01', value: '1'},
+                      {label: '02', value: '2'},
+                      {label: '03', value: '3'},
                       {label: `${moment().format('mm')}`, value: `${moment().format('mm')}`},
                   ]}
                   defaultValue={this.state.min}
@@ -293,7 +295,7 @@ export class CreateInvite extends Component {
         </View>
 
         <View style={[styles.button, {position: 'absolute', bottom: 150}]}>
-          <Text style={styles.muli_w20}>Create Invite</Text>
+          <Text style={styles.muli_w20} onPress={() => this.props.navigation.navigate('HomeEventScreen')}>Create Invite</Text>
         </View>
 
         {/* Dock */}

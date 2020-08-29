@@ -20,6 +20,11 @@ import ConfirmationRec from "./screens/ConfirmationRec";
 import ConfirmationSen from "./screens/ConfirmationSen";
 import Scan from "./screens/Scan";
 
+// LOL
+import HomeEvent from "./screens/HomeEvent";
+import HomeUrgent from "./screens/HomeUrgent";
+import HistoryUrgent from "./screens/HistoryUrgent";
+
 
 const Stack = createStackNavigator();
 
@@ -83,6 +88,19 @@ function App() {
           <Stack.Screen
             name="ScanScreen"
             component={Scan}
+          />
+
+          <Stack.Screen
+            name="HomeEventScreen"
+            component={HomeEvent}
+          />
+          <Stack.Screen
+            name="HomeUrgentScreen"
+            component={HomeUrgent}
+          />
+           <Stack.Screen
+            name="HistoryUrgentScreen"
+            component={HistoryUrgent}
           />
         </Stack.Navigator>
       </NavigationContainer>

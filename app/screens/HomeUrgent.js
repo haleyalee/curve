@@ -3,13 +3,13 @@
 import React, { Component } from 'react';
 import { View, Text, Button, SafeAreaView, ScrollView} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, MaterialIcons, SimpleLineIcons, AntDesign } from '@expo/vector-icons';
 
 import moment from 'moment';
 import styles from '../Styles';
 import Dock from '../components/Dock';
 
-export class Home extends Component {
+export class HomeUrgent extends Component {
 
   render() {
     return (
@@ -48,26 +48,26 @@ export class Home extends Component {
           <View style={{paddingTop: 40, paddingLeft: 30, paddingRight: 30}}>
 
             {/* Red */}
-            {/* <View style={[styles.urgent_alert, styles.shadow, {backgroundColor: '#E62323', }]}>
+            <View style={[styles.urgent_alert, styles.shadow, {backgroundColor: '#E62323', }]}>
               <View style={{flexDirection: 'row', justifyContent: 'space-between', paddingLeft:20, paddingRight: 20}}>
                 <Text style={styles.muli_w20}>@abc123</Text>
                 <Text style={styles.muli_w20}>August 24, 2020</Text>
               </View> 
-            </View> */}
+            </View>
 
             {/* Yellow */}
-            {/* <View style={[styles.urgent_alert, styles.shadow, {backgroundColor: '#FFCF66'}]}>
+            <View style={[styles.urgent_alert, styles.shadow, {backgroundColor: '#FFCF66'}]}>
               <View style={{flexDirection: 'row', justifyContent: 'space-between', paddingLeft:20, paddingRight: 20}}>
                   <Text style={styles.muli_w20}>@def456</Text>
                   <Text style={styles.muli_w20}>August 27, 2020</Text>
                 </View>    
-              </View> */}
+              </View>
            
 
             {/* No urgent alerts */}
-            <View style={[styles.urgent_alert]}>
+            {/* <View style={[styles.urgent_alert]}>
               <Text style={styles.muli_b20}>no urgent alerts</Text>
-            </View>
+            </View> */}
           </View>
 
           {/* Cards */}
@@ -76,15 +76,15 @@ export class Home extends Component {
             <View style={[styles.cards, styles.shadow]}>
               <Text style={[styles.carrois_b30, {paddingBottom: 10}]}>upcoming</Text>
 
-              <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+              {/* <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                 <Text style={styles.muli_blk20}>no upcoming interactions</Text>
                 <Text style={styles.muli_blk20}></Text>
-              </View>
-
-              {/* <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                <Text style={styles.muli_blk20}>2:00 pm</Text>
-                <Text style={styles.muli_blk20}>@hal64</Text>
               </View> */}
+
+              <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                <Text style={styles.muli_blk20}>8:00 pm</Text>
+                <Text style={styles.muli_blk20}>@hal64</Text>
+              </View>
               
             </View>
             {/* Past */}
@@ -113,11 +113,25 @@ export class Home extends Component {
         </ScrollView>
 
         {/* Dock */}
-        <Dock num={'homescreen'} navigation={this.props.navigation}/>
+        {/* <Dock num={'homescreen'} navigation={this.props.navigation}/> */}
+
+        <View style={styles.dock_container}>
+          <View style={styles.dock}>
+            {/* Home */}
+            <SimpleLineIcons name="home" size={30} color="#235789" onPress={() => this.props.navigation.navigate('HomeUrgentScreen')} />
+            {/* <AntDesign name="home" size={30} color="#235789" onPress={() => this.props.navigation.navigate('HomeScreen')}/> */}
+            {/* History */}
+            <AntDesign name="clockcircleo" size={30} color="#DDDDDD" onPress={() => this.props.navigation.navigate('HistoryUrgentScreen')} />
+            {/* <FontAwesome5 name="history" size={30} color="#235789" onPress={() => this.props.navigation.navigate('HistoryScreen')}/> */}
+            {/* Profile */}
+            {/* <Octicons name="person" size={30} color="#235789" onPress={() => this.props.navigation.navigate('ProfileScreen')}/> */}
+            <MaterialCommunityIcons name="account-heart-outline" size={35} color="#DDDDDD" onPress={() => this.props.navigation.navigate('ProfileScreen')}/>
+          </View>
+        </View>
 
       </SafeAreaView>
     )
   }
 }
 
-export default Home;
+export default HomeUrgent;
