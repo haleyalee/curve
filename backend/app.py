@@ -1,12 +1,11 @@
 import json
 from flask import Flask, request
 from db import db
-from db import Task
-from db import Category
-from db import Subtask
+from db import Person
+from db import History
 
 # define db filename
-db_filename = "todo.db"
+db_filename = "curve.db"
 app = Flask(__name__)
 
 # setup config
@@ -29,83 +28,83 @@ def failure_response(message, code=404):
     return json.dumps({"success": False, "error": message}), code
 
 
-# -- TASK ROUTES ------------------------------------------------------
+# -- PERSON ROUTES ------------------------------------------------------
 
 @app.route('/')
-@app.route('/tasks/')
-def get_tasks():
-    return success_response([t.serialize() for t in Task.query.all()])
+@app.route('/persons/')
+def get_persons():
+    return success_response([p.serialize() for p in Person.query.all()])
 
 
-@app.route('/tasks/', methods=['POST'])
-def create_task():
+@app.route('/persons/', methods=['POST'])
+def create_person():
     request_body = json.loads(request.data)
-    new_task = Task(description=request_body.get("description"), done=request_body.get("done"))
-    db.session.add(new_task)
+    new_person = Person(netid=request_body.get("netid"), name=request_body.get("name"), birthday=request_body.get("birthday"), qrcode=request_body.get("qrcode"))
+    db.session.add(new_person)
     db.session.commit()
-    return success_response(new_task.serialize())
+    return success_response(new_person.serialize())
 
 
-@app.route('/tasks/<int:task_id>/')
-def get_task(task_id):
-    task = Task.query.filter_by(id=task_id).first()
-    if task is None:
-        return failure_response("Task not found!")
-    return success_response(task.serialize())
+@app.route('/persons/<string:netid>/')
+def get_person(netid):
+    person = Person.query.filter_by(netid=netid).first()
+    if person is None:
+        return failure_response("Person not found!")
+    return success_response(person.serialize())
 
 
-@app.route('/tasks/<int:task_id>/', methods=['POST'])
-def update_task(task_id):
-    body = json.loads(request.data)
-    task = Task.query.filter_by(id=task_id).first()
-    if task is None:
-        return failure_response("Task not found!")
-    task.description = body.get("description", task.description)
-    task.done = body.get("done", task.done)
+# @app.route('/tasks/<int:task_id>/', methods=['POST'])
+# def update_task(task_id):
+#     body = json.loads(request.data)
+#     task = Task.query.filter_by(id=task_id).first()
+#     if task is None:
+#         return failure_response("Task not found!")
+#     task.description = body.get("description", task.description)
+#     task.done = body.get("done", task.done)
+#     db.session.commit()
+#     return success_response(task.serialize())
+
+
+# @app.route('/tasks/<int:task_id>/', methods=['DELETE'])
+# def delete_task(task_id):
+#     task = Task.query.filter_by(id=task_id).first()
+#     if task is None:
+#         return failure_response("Task not found!")
+#     db.session.delete(task)
+#     db.session.commit()
+#     return success_response(task.serialize())
+
+
+# # -- SUBTASK ROUTES ---------------------------------------------------
+
+@app.route('/persons/<string:netid>/historylog/', methods=['POST'])
+def create_history(netid):
+    person = Person.query.filter_by(netid=netid).first()
+    if person is None:
+        return failure_response("Person not found!")
+    request_body = json.loads(request.data)
+    new_history = History(date=request_body.get("date"), contact=request_body.get("contact"), netid=netid)
+    db.session.add(new_history)
     db.session.commit()
-    return success_response(task.serialize())
+    return success_response(person.serialize())
 
 
-@app.route('/tasks/<int:task_id>/', methods=['DELETE'])
-def delete_task(task_id):
-    task = Task.query.filter_by(id=task_id).first()
-    if task is None:
-        return failure_response("Task not found!")
-    db.session.delete(task)
-    db.session.commit()
-    return success_response(task.serialize())
+# # -- CATEGORY ROUTES --------------------------------------------------
 
-
-# -- SUBTASK ROUTES ---------------------------------------------------
-
-@app.route('/tasks/<int:task_id>/subtasks/', methods=['POST'])
-def create_subtask(task_id):
-    task = Task.query.filter_by(id=task_id).first()
-    if task is None:
-        return failure_response("Task not found!")
-    body = json.loads(request.data)
-    new_subtask = Subtask(description=body.get("description"), done=body.get("done"), task_id=task_id)
-    db.session.add(new_subtask)
-    db.session.commit()
-    return success_response(task.serialize())
-
-
-# -- CATEGORY ROUTES --------------------------------------------------
-
-@app.route('/tasks/<int:task_id>/category/', methods=['POST'])
-def assign_category(task_id):
-    task = Task.query.filter_by(id=task_id).first()
-    if task is None:
-        return failure_response("Task not found!")
-    body = json.loads(request.data)
-    description = body.get("description")
-    color = body.get("color")
-    category = Category.query.filter_by(description=description, color=color).first()
-    if category is None:
-        category = Category(description=description, color=color)
-    task.categories.append(category)
-    db.session.commit()
-    return success_response(task.serialize())
+# @app.route('/tasks/<int:task_id>/category/', methods=['POST'])
+# def assign_category(task_id):
+#     task = Task.query.filter_by(id=task_id).first()
+#     if task is None:
+#         return failure_response("Task not found!")
+#     body = json.loads(request.data)
+#     description = body.get("description")
+#     color = body.get("color")
+#     category = Category.query.filter_by(description=description, color=color).first()
+#     if category is None:
+#         category = Category(description=description, color=color)
+#     task.categories.append(category)
+#     db.session.commit()
+#     return success_response(task.serialize())
 
 
 if __name__ == '__main__':
